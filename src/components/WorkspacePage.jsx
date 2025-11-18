@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
-import Hero from './components/Hero'
-import Nav from './components/Nav'
-import CommandPalette from './components/CommandPalette'
+import Workspace from './Workspace'
+import CommandPalette from './CommandPalette'
 
-function App() {
+export default function WorkspacePage() {
   const [paletteOpen, setPaletteOpen] = useState(false)
   return (
     <div className="relative min-h-screen bg-[#0A0C10] text-white">
-      <Nav />
-      <Hero />
+      <Workspace />
       <CommandPalette open={paletteOpen} onClose={setPaletteOpen} />
     </div>
   )
 }
-
-export default App
